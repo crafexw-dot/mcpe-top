@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCPE TOP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0b0b0b;
+    color: white;
+}
+
+/* TOPO */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: black;
+    border-bottom: 2px solid #00e5ff;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+/* BOTÃO */
+.btn {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border: 2px solid #00e5ff;
+    cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #111;
+    transition: 0.3s;
+    padding: 10px;
+    border-right: 2px solid #00e5ff;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.server {
+    background: #222;
+    margin: 10px 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.server:hover {
+    background: #333;
+}
+
+/* CONTEÚDO */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.sky {
+    font-size: 22px;
+    color: gold;
+    margin: 10px;
+}
+
+/* RANKING */
+.rank {
+    margin-top: 20px;
+}
+
+.box {
+    background: #1a1a1a;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* DATAS */
+.dates {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dateBox {
+    background: #222;
+    padding: 10px;
+    border: 1px solid #00e5ff;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="title">MCPE TOP</div>
+    <div class="btn" onclick="toggleSidebar()"></div>
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <div class="server" onclick="selectServer('Mega Sky')">
+        🖼 Mega Sky
+    </div>
+
+    <div class="server" onclick="selectServer('PvP Brasil')">
+        🖼 PvP Brasil
+    </div>
+
+</div>
+
+<!-- CONTEÚDO -->
+<div class="content">
+
+    <div class="sky">⚔ SKY WARS</div>
+
+    <div id="serverName">Selecione um servidor</div>
+
+    <!-- RANK -->
+    <div class="rank">
+        <div class="box">🥇 Top 1 - Player 1</div>
+        <div class="box">🥈 Top 2 - Player 2</div>
+        <div class="box">🥉 Top 3 - Player 3</div>
+    </div>
+
+    <!-- DATAS -->
+    <div class="dates">
+        <div class="dateBox">2025</div>
+        <div class="dateBox">2024</div>
+        <div class="dateBox">2023</div>
+    </div>
+
+    <!-- INFO -->
+    <div class="box">
+        Informações do servidor aparecem aqui abaixo das datas.
+    </div>
+
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+
+function selectServer(name) {
+    document.getElementById("serverName").innerText = "Servidor: " + name;
+    toggleSidebar(); // fecha sidebar
+}
+</script>
+
+</body>
+</html>
