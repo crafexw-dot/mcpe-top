@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCPE TOP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a2e);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #000;
+    border-bottom: 2px solid #00f0ff;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #333;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    border-color: #00f0ff;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rank {
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.first { background: gold; color: black; }
+.second { background: silver; color: black; }
+.third { background: #cd7f32; color: black; }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    color: #aaa;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🏆 MCPE TOP</h1>
+    <p>Ranking de servidores SkyWars</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🔥 Mega Sky</h2>
+        <p>Servidor parceiro competitivo de SkyWars</p>
+
+        <div class="top">
+            <div class="rank first">🥇 Top 1: PlayerX</div>
+            <div class="rank second">🥈 Top 2: PlayerY</div>
+            <div class="rank third">🥉 Top 3: PlayerZ</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⚔ PvP Brasil</h2>
+        <p>Servidor focado em batalha e skill</p>
+
+        <div class="top">
+            <div class="rank first">🥇 Top 1: Alpha</div>
+            <div class="rank second">🥈 Top 2: Beta</div>
+            <div class="rank third">🥉 Top 3: Gamma</div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    MCPE TOP © 2026 - Ranking oficial de servidores
+</footer>
+
+</body>
+</html>
