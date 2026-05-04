@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCPE TOP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+
+    background-image: url("IMG_20260504_075723.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* clarear fundo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.10);
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 18px;
+    background: rgba(0,0,0,0.4);
+    border-bottom: 2px solid #00e5ff;
+}
+
+.logo {
+    height: 110px;
+}
+
+/* BOTÃO */
+.btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.btn img {
+    width: 100%;
+}
+
+.btn.hidden {
+    display: none;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 260px;
+    height: 100%;
+    background: #111;
+    transition: 0.3s ease;
+    padding: 10px;
+    border-right: 2px solid #00e5ff;
+    z-index: 30;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* SERVIDORES */
+.server {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #222;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.server:hover {
+    background: #333;
+}
+
+.server-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+/* TITULO */
+.server-title {
+    font-size: 30px;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+    margin: 25px;
+    text-align: center;
+}
+
+/* SEGUIDORES */
+.followers {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.follower {
+    background: rgba(0,0,0,0.5);
+    margin: 8px auto;
+    padding: 8px;
+    width: 200px;
+    border-radius: 6px;
+}
+
+/* RANKING */
+.rank {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.rank img {
+    width: 95%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div id="btn" class="btn" onclick="openMenu()">
+        <img src="1777906131565.png">
+    </div>
+
+    <img src="IMG_20260504_080009.png" class="logo">
+
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <div class="server" onclick="selectServer('Mega Sky')">
+        <img src="20260504_164003.png" class="server-img">
+        <span>Mega Sky</span>
+    </div>
+
+    <div class="server" onclick="selectServer('EspaçoMC')">
+        <img src="20260504_164131.png" class="server-img">
+        <span>EspaçoMC</span>
+    </div>
+
+</div>
+
+<!-- CONTEUDO -->
+<div>
+
+    <div id="serverTitle" class="server-title">
+        Selecione um servidor
+    </div>
+
+    <!-- SEGUIDORES -->
+    <div class="followers">
+        <h2>Seguidores</h2>
+        <div class="follower">WXmcpe</div>
+        <div class="follower">PlayerExemplo</div>
+    </div>
+
+    <!-- RANKING -->
+    <div class="rank">
+        <img src="1777906224540.png">
+    </div>
+
+    <div class="rank">
+        <img src="1777906148792.png">
+    </div>
+
+    <div class="rank">
+        <img src="1777906097814.png">
+    </div>
+
+</div>
+
+<script>
+
+function openMenu() {
+    document.getElementById("sidebar").classList.add("active");
+    document.getElementById("btn").classList.add("hidden");
+}
+
+function closeMenu() {
+    document.getElementById("sidebar").classList.remove("active");
+    document.getElementById("btn").classList.remove("hidden");
+}
+
+function selectServer(name) {
+    document.getElementById("serverTitle").innerText = name;
+    closeMenu();
+}
+
+</script>
+
+</body>
+                                      </html>
