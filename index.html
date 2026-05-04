@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCPE TOP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+
+    background-image: url("IMG_20260504_075723.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* clarear fundo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.10);
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 18px;
+    background: rgba(0,0,0,0.4);
+    border-bottom: 2px solid #00e5ff;
+}
+
+.logo {
+    height: 110px;
+}
+
+/* BOTÃO */
+.btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.btn img {
+    width: 100%;
+}
+
+.btn.hidden {
+    display: none;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 260px;
+    height: 100%;
+    background: #111;
+    transition: 0.3s ease;
+    padding: 10px;
+    border-right: 2px solid #00e5ff;
+    z-index: 30;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* SERVIDORES (SÓ IMAGEM) */
+.server {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.server img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* TITULO */
+.server-title {
+    font-size: 30px;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+    margin: 25px;
+    text-align: center;
+}
+
+/* IMAGEM DO SERVIDOR */
+.main-server {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.main-server img {
+    width: 95%;
+    max-width: 600px;
+    border-radius: 15px;
+}
+
+/* RANKING */
+.rank {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.rank img {
+    width: 95%;
+    max-width: 600px;
+    border-radius: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div id="btn" class="btn" onclick="openMenu()">
+        <img src="1777906131565.png">
+    </div>
+
+    <img src="IMG_20260504_080009.png" class="logo">
+
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <div class="server" onclick="selectServer('WorldSky')">
+        <img src="20260504_164003.png">
+    </div>
+
+    <div class="server" onclick="selectServer('EspaçoMC')">
+        <img src="20260504_164131.png">
+    </div>
+
+</div>
+
+<!-- CONTEUDO -->
+<div>
+
+    <!-- NOME DO SERVIDOR -->
+    <div id="serverTitle" class="server-title">
+        Selecione um servidor
+    </div>
+
+    <!-- IMAGEM PRINCIPAL DO SERVIDOR -->
+    <div class="main-server">
+        <img id="serverImage" src="1777904323150.png">
+    </div>
+
+    <!-- RANKING -->
+    <div class="rank">
+        <img src="1777906224540.png">
+    </div>
+
+    <div class="rank">
+        <img src="1777906148792.png">
+    </div>
+
+    <div class="rank">
+        <img src="1777906097814.png">
+    </div>
+
+</div>
+
+<script>
+
+function openMenu() {
+    document.getElementById("sidebar").classList.add("active");
+    document.getElementById("btn").classList.add("hidden");
+}
+
+function closeMenu() {
+    document.getElementById("sidebar").classList.remove("active");
+    document.getElementById("btn").classList.remove("hidden");
+}
+
+function selectServer(name) {
+    document.getElementById("serverTitle").innerText = name;
+
+    if (name === "WorldSky") {
+        document.getElementById("serverImage").src = "1777904323150.png";
+    }
+
+    if (name === "EspaçoMC") {
+        document.getElementById("serverImage").src = "20260504_164131.png";
+    }
+
+    closeMenu();
+}
+
+</script>
+
+</body>
+</html>
