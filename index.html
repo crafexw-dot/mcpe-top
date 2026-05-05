@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCPE TOP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background-image: url("IMG_20260504_075723.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* leve luz */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.07);
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 18px;
+    background: rgba(0,0,0,0.5);
+}
+
+/* BOTÃO BETA */
+.btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 110px;
+    cursor: pointer;
+}
+
+.btn img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* LOGO */
+.logo {
+    height: 120px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 260px;
+    height: 100%;
+    background: #111;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* SERVIDORES (MESMO TAMANHO) */
+.server img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* IMAGEM DO NOME */
+.server-banner {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.server-banner img {
+    width: 90%;
+    max-width: 500px;
+}
+
+/* RANK */
+.rank-item {
+    text-align: center;
+    margin: 70px 0;
+}
+
+.rank-item img {
+    width: 95%;
+    max-width: 550px;
+    border-radius: 12px;
+}
+
+/* CABEÇA */
+.player-head img {
+    width: 65px;
+    height: 65px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="btn" onclick="openMenu()">
+        <img src="botao_beta.png">
+    </div>
+
+    <img src="IMG_20260504_080009.png" class="logo">
+
+</header>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+
+    <div class="server">
+        <img src="20260504_164003.png">
+    </div>
+
+    <div class="server">
+        <img src="20260504_164131.png">
+    </div>
+
+</div>
+
+<!-- CONTEÚDO -->
+<div>
+
+    <!-- IMAGEM NO LUGAR DO NOME -->
+    <div class="server-banner">
+        <img src="1778012122262.png">
+    </div>
+
+    <!-- TOP 1 -->
+    <div class="rank-item">
+        <img src="1777906224540.png">
+        <div class="player-head">
+            <img src="https://mc-heads.net/avatar/Steve/100">
+        </div>
+    </div>
+
+    <!-- TOP 2 -->
+    <div class="rank-item">
+        <img src="1777906148792.png">
+        <div class="player-head">
+            <img src="https://mc-heads.net/avatar/Steve/100">
+        </div>
+    </div>
+
+    <!-- TOP 3 -->
+    <div class="rank-item">
+        <img src="1777906097814.png">
+        <div class="player-head">
+            <img src="https://mc-heads.net/avatar/Steve/100">
+        </div>
+    </div>
+
+</div>
+
+<script>
+function openMenu() {
+    document.getElementById("sidebar").classList.add("active");
+}
+</script>
+
+</body>
+  </html>
