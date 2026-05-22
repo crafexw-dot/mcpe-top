@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WxMCPE</title>  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:linear-gradient(to bottom,#0f172a,#111827,#000000);
+      color:white;
+      min-height:100vh;
+    }
+
+    header{
+      padding:25px;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(10px);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:2px solid rgba(255,255,255,0.1);
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+      color:#38bdf8;
+      text-shadow:0 0 15px #38bdf8;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      margin-left:20px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    .hero{
+      text-align:center;
+      padding:120px 20px;
+    }
+
+    .hero h1{
+      font-size:70px;
+      margin-bottom:20px;
+      color:#38bdf8;
+      text-shadow:0 0 20px #38bdf8;
+    }
+
+    .hero p{
+      font-size:22px;
+      color:#d1d5db;
+      max-width:800px;
+      margin:auto;
+      line-height:1.6;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:15px 35px;
+      background:#38bdf8;
+      color:black;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 20px #38bdf8;
+    }
+
+    .ranks{
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    .ranks h2{
+      font-size:40px;
+      margin-bottom:40px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:20px;
+      padding:30px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 20px rgba(56,189,248,0.5);
+    }
+
+    .card h3{
+      margin-top:15px;
+      font-size:24px;
+    }
+
+    .emoji{
+      font-size:55px;
+    }
+
+    footer{
+      margin-top:70px;
+      text-align:center;
+      padding:25px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      color:#9ca3af;
+    }
+  </style></head>
+<body>  <header>
+    <div class="logo">WxMCPE</div><nav>
+  <a href="#">Início</a>
+  <a href="#">Patentes</a>
+  <a href="#">Ranking</a>
+  <a href="#">Discord</a>
+</nav>
+
+  </header>  <section class="hero">
+    <h1>WxMCPE</h1><p>
+  O sistema competitivo brasileiro de MCPE.
+  Suba de patente, desafie jogadores,
+  participe de eventos e torne-se o Rei do MCPE.
+</p>
+
+<a class="btn" href="#">Entrar no Discord</a>
+
+  </section>  <section class="ranks">
+    <h2>🏆 Patentes Oficiais</h2><div class="cards">
+
+  <div class="card">
+    <div class="emoji">🪨</div>
+    <h3>Pedra</h3>
+  </div>
+
+  <div class="card">
+    <div class="emoji">🥉</div>
+    <h3>Bronze</h3>
+  </div>
+
+  <div class="card">
+    <div class="emoji">🥈</div>
+    <h3>Prata</h3>
+  </div>
+
+  <div class="card">
+    <div class="emoji">🥇</div>
+    <h3>Ouro</h3>
+  </div>
+
+  <div class="card">
+    <div class="emoji">💎</div>
+    <h3>Diamante</h3>
+  </div>
+
+  <div class="card">
+    <div class="emoji">👑</div>
+    <h3>Mestre Real</h3>
+  </div>
+
+</div>
+
+  </section>  <footer>
+    © 2026 WxMCPE • Todos os direitos reservados
+  </footer></body>
+</html>
